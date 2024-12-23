@@ -1,0 +1,114 @@
+*:root{
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: var(--violet);
+    background: url(images/bg-desktop.svg) no-repeat var(--violet);
+    background-size: 80%;
+    background-position: 100px 0;
+}
+header img{
+    padding: 1.5em;
+    margin-left: 20px;
+    width: 250px;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+.inner_section{
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    transform: scale(1.05);
+}
+section img{
+    width: 590px;
+    margin-right: 40px;
+}
+section .article h1{
+    font-size: 2rem;
+    max-width: 20ch;
+    color: white;
+    line-height: 45px;
+    margin-bottom: 18px;
+    margin-top: 50px;
+}
+.article p{
+    color: white;
+    max-width: 49ch;
+    line-height: 19px;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+.article button{
+    background-color: white;
+    border-radius: 30px;
+    padding: 10.5px 37px;
+    font-size: 0.87rem;
+    color: var(--violet);
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.235);
+    cursor: pointer;
+}
+.article button:hover{
+    background-color: var(--softMagenta);
+    color: white;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:450px) {
+    body{
+        background: url(images/bg-mobile.svg) no-repeat var(--violet); 
+        background-position: 0 -50px;
+        background-size: 100%;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        text-align: center;
+    }
+    header img{
+        width: 200px;
+    }
+    section img{
+        width: 80%;
+        margin: auto;
+    }
+    .inner_section{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: auto;
+        transform: scale(1);
+    }
+    .article h1{
+        margin: auto;
+        font-size: 1.2rem;
+    }
+    .article p{
+        margin: auto;
+        max-width: 30ch;
+        font-size: 1.2rem;
+        line-height: 29px;
+        margin-bottom: 30px;
+    }
+    .article button{
+        padding: 10.5px 70px;
+    }
+}
